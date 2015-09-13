@@ -5,11 +5,13 @@ import java.util.Scanner;
  */
 public class StuckNumbers {
     public static void main(String[] args){
+        
         Scanner reader = new Scanner(System.in);
 
         Integer count = reader.nextInt();
 
         reader.nextLine();
+        
         String[] numbers = new String[count];
 
         String[] input = reader.nextLine().split(" ");
@@ -31,7 +33,7 @@ public class StuckNumbers {
                             String rightHand = numbers[c] + "" + numbers[d];
 
                             if(leftHand.equals(rightHand)){
-                                System.out.printf("%s|%s==%s|%s",numbers[a],numbers[b],numbers[c],numbers[d]).println();
+                                System.out.printf("%s|%s==%s|%s", numbers[a],numbers[b],numbers[c],numbers[d]).println();
                                 counter++;
                             }
                         }
@@ -39,6 +41,7 @@ public class StuckNumbers {
                 }
             }
         }
+        
         if(counter == 0){
             System.out.println("No");
         }
